@@ -1,0 +1,70 @@
+/* =========================================
+   3. Propriedades de Flexbox para layout
+========================================= */
+.flex-container {
+    /* Propriedades Flexbox no Container Pai */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+    gap: 15px;
+    row-gap: 20px;
+    column-gap: 15px;
+    
+    /* Estilização extra para visualização */
+    min-height: 100vh;
+    background-color: #f4f4f9;
+    padding: 20px;
+}
+
+/* =========================================
+   2. Box Model nos 20 Elementos
+========================================= */
+.box {
+    /* Content (Conteúdo) */
+    width: 80px;
+    height: 80px;
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    display: flex; /* Flexbox interno para centralizar o número */
+    justify-content: center;
+    align-items: center;
+
+    /* Padding (Preenchimento) */
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+
+    /* Border (Borda) */
+    border-width: 3px;
+    border-style: solid;
+    border-color: #2980b9;
+    border-radius: 8px;
+
+    /* Margin (Margem externa) */
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+
+    /* Propriedades Flexbox nos Itens Filhos */
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 120px;
+    align-self: auto;
+    order: 0;
+}
+
+/* Exemplo de manipulação flexível em um elemento específico */
+.box:nth-child(10) {
+    align-self: stretch; /* Altera o alinhamento individual */
+    flex-grow: 2; /* Faz o elemento 10 ocupar mais espaço */
+    order: -1; /* Joga o elemento 10 para o início da tela */
+    background-color: #e74c3c;
+    border-color: #c0392b;
+}
